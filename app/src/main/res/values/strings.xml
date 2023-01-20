@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tracker</string>
+    <string name="lbl_expense">EXPENSE</string>
+    <string name="lbl_earning">EARNING</string>
+    <string name="lbl_balance">BALANCE</string>
+    <string name="lbl_value">0</string>
+    <string name="lbl_view_txn">View Transaction</string>
+    <string name="lbl_mng_txn">Manage Transaction</string>
+</resources>
