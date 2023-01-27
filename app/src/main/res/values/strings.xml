@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">Tracker</string>
+<!--    home Labels-->
+    <string name="str_welcome">WELCOME \nBACK</string>
+    <string name="str_login">Please Login To Continue</string>
+    <string name="desc_login">Login Button</string>
+<!--    dashboard labels-->
     <string name="lbl_expense">EXPENSE</string>
     <string name="lbl_earning">EARNING</string>
     <string name="lbl_balance">BALANCE</string>
+    <string name="lbl_all">ALL</string>
+    <string name="lbl_deposit">DEPOSIT</string>
+    <string name="lbl_type">Type</string>
     <string name="lbl_value">0</string>
     <string name="lbl_view_txn">View Transaction</string>
     <string name="lbl_mng_txn">Manage Transaction</string>
+<!--    buttons-->
+    <string name="btn_current_mth">Current\nmonth</string>
+    <string name="btn_last_mth">Last\nmonth</string>
+    <string name="btn_current_year">Current\nyear</string>
 </resources>
