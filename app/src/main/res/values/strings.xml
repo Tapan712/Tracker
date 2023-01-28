@@ -14,8 +14,15 @@
     <string name="lbl_value">0</string>
     <string name="lbl_view_txn">View Transaction</string>
     <string name="lbl_mng_txn">Manage Transaction</string>
+    <string name="lbl_from">From Date</string>
+    <string name="lbl_to">To Date</string>
+    <string name="lbl_search">Search</string>
+    <string name="lbl_clear">Clear</string>
 <!--    buttons-->
     <string name="btn_current_mth">Current\nmonth</string>
     <string name="btn_last_mth">Last\nmonth</string>
     <string name="btn_current_year">Current\nyear</string>
+<!--    hints-->
+    <string name="h_fDate">Select From Date</string>
+    <string name="h_toDate">Select To Date</string>
 </resources>
