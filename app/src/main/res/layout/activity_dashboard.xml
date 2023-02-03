@@ -41,7 +41,7 @@ tools:context=".MainActivity">
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txtEarn"
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:layout_weight="1"
@@ -88,7 +88,7 @@ tools:context=".MainActivity">
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/txtExp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_weight="1"
@@ -139,7 +139,7 @@ tools:context=".MainActivity">
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/txtBal"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_weight="1"

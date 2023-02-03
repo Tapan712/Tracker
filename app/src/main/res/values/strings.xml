@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Tracker</string>
-<!--    home Labels-->
+    <!--    home Labels-->
     <string name="str_welcome">WELCOME \nBACK</string>
     <string name="str_login">Please Login To Continue</string>
     <string name="desc_login">Login Button</string>
-<!--    dashboard labels-->
+    <!--    dashboard labels-->
     <string name="lbl_expense">EXPENSE</string>
     <string name="lbl_earning">EARNING</string>
     <string name="lbl_balance">BALANCE</string>
@@ -18,11 +18,34 @@
     <string name="lbl_to">To Date</string>
     <string name="lbl_search">Search</string>
     <string name="lbl_clear">Clear</string>
-<!--    buttons-->
+    <string name="lbl_add_exp">ADD EXPENSE</string>
+    <string name="lbl_edit_exp">EDIT EXPENSE</string>
+    <string name="lbl_delete_exp">DELETE EXPENSE</string>
+    <string name="lbl_add_dep">ADD DEPOSIT</string>
+    <string name="lbl_edit_dep">EDIT DEPOSIT</string>
+    <string name="lbl_delete_dep">DELETE DEPOSIT</string>
+    <string name="lbl_add_cat">ADD CATEGORY</string>
+    <string name="lbl_view_rpt">VIEW REPORT</string>
+    <string name="lbl_cat">Category</string>
+    <string name="lbl_name">Expense Name</string>
+    <string name="lbl_price">Price</string>
+    <string name="lbl_quantity">Quantity</string>
+    <string name="lbl_total">Total</string>
+    <string name="lbl_by_whom">By Whom</string>
+    <string name="lbl_date">Date</string>
+    <string name="lbl_dep_name">Name</string>
+    <string name="lbl_dep_from">From</string>
+    <string name="lbl_dep_amount">Amount</string>
+    <string name="lbl_vw_nos">nos X</string>
+
+    <!--    buttons-->
     <string name="btn_current_mth">Current\nmonth</string>
     <string name="btn_last_mth">Last\nmonth</string>
     <string name="btn_current_year">Current\nyear</string>
-<!--    hints-->
+    <string name="btn_submit">Submit</string>
+
+    <!--    hints-->
     <string name="h_fDate">Select From Date</string>
     <string name="h_toDate">Select To Date</string>
+
 </resources>

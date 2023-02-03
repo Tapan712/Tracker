@@ -10,7 +10,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tracker"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        tools:replace="android:icon">
+        <activity
+            android:name=".AddCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddDepositActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditExpenseFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddExpenseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransactionDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewScreenActivity"
+            android:exported="false" />
         <activity
             android:name=".ViewFormActivity"
             android:exported="false" />
