@@ -20,6 +20,7 @@ public class TransactionDashboardActivity extends AppCompatActivity {
         CardView editDep = findViewById(R.id.edit_dep);
         CardView delExp = findViewById(R.id.del_exp);
         CardView delDep = findViewById(R.id.del_dep);
+        CardView viewReport = findViewById(R.id.report);
         addTrn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +63,12 @@ public class TransactionDashboardActivity extends AppCompatActivity {
                 loadDeleteDep();
             }
         });
+        viewReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadReport();
+            }
+        });
 
 
     }
@@ -99,6 +106,10 @@ public class TransactionDashboardActivity extends AppCompatActivity {
         Intent intent = new Intent(this,EditExpenseFormActivity.class);
         intent.putExtra("Type","Debit");
         intent.putExtra("Action","Delete");
+        startActivity(intent);
+    }
+    private void loadReport(){
+        Intent intent = new Intent(this,ReportFormActivity.class);
         startActivity(intent);
     }
 }

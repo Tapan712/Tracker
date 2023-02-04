@@ -10,8 +10,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tracker"
-        tools:targetApi="31"
-        tools:replace="android:icon">
+        tools:replace="android:icon"
+        tools:targetApi="31">
+        <activity
+            android:name=".ReportScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportFormActivity"
+            android:exported="false" />
         <activity
             android:name=".AddCategoryActivity"
             android:exported="false" />

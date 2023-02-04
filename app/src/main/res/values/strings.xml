@@ -6,8 +6,10 @@
     <string name="desc_login">Login Button</string>
     <!--    dashboard labels-->
     <string name="lbl_expense">EXPENSE</string>
+    <string name="lbl_expense_small">Expense</string>
     <string name="lbl_earning">EARNING</string>
     <string name="lbl_balance">BALANCE</string>
+    <string name="lbl_balance_small">Balance</string>
     <string name="lbl_all">ALL</string>
     <string name="lbl_deposit">DEPOSIT</string>
     <string name="lbl_type">Type</string>
@@ -37,6 +39,7 @@
     <string name="lbl_dep_from">From</string>
     <string name="lbl_dep_amount">Amount</string>
     <string name="lbl_vw_nos">nos X</string>
+    <string name="lbl_rep_header">Category wise Expense</string>
 
     <!--    buttons-->
     <string name="btn_current_mth">Current\nmonth</string>
