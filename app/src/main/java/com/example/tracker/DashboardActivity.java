@@ -3,6 +3,7 @@ package com.example.tracker;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
 import androidx.biometric.BiometricPrompt;
+import androidx.cardview.widget.CardView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -39,7 +40,7 @@ public class DashboardActivity extends AppCompatActivity {
         txtEarn.setText(valArr[0]);
         txtExp.setText(valArr[1]);
         txtBal.setText(valArr[2]);
-        Button btnView = findViewById(R.id.btn_view);
+        CardView btnView = findViewById(R.id.btn_view);
         btnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -47,7 +48,7 @@ public class DashboardActivity extends AppCompatActivity {
                 loadViewForm();
             }
         });
-        Button btnTrn = findViewById(R.id.btnTrn);
+        CardView btnTrn = findViewById(R.id.btnTrn);
         btnTrn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -55,6 +56,15 @@ public class DashboardActivity extends AppCompatActivity {
                 loadTrnForm();
             }
         });
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(getIntent());
+        overridePendingTransition(0, 0);
     }
 
     public void customActionBar(){

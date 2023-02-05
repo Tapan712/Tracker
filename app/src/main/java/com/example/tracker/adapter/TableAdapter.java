@@ -69,9 +69,11 @@ public class TableAdapter extends RecyclerView.Adapter<TableAdapter.TableItemVie
                 holder.tvTotal.setTextColor(Color.parseColor("#0B8100"));
             }
         }
+        int pos = position;
         holder.llRow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 TrackerDB db = TrackerDB.getDb(context);
                 Transaction trn = db.transactionDao().findById(secItem.getId()).orElse(null);
                 if(action.equalsIgnoreCase("Edit")) {
@@ -79,22 +81,35 @@ public class TableAdapter extends RecyclerView.Adapter<TableAdapter.TableItemVie
                     intent.putExtra("EditTransaction", trn);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
+                    notifyDataSetChanged();
                 } else if (action.equalsIgnoreCase("Delete")) {
-                    try {
-                        db.transactionDao().delete(trn);
+                    new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE).setTitleText("Are you sure to Delete?").setContentText("Won't be able to recover this Transaction!").setCancelText("NO").setConfirmText("YES").showCancelButton(true).setCancelClickListener(
+                            new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                    sweetAlertDialog.dismissWithAnimation();
+                                }
+                            }
+                    ).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                            try {
+                                db.transactionDao().delete(trn);
 //                        notifyItemChanged(position);
-                        new SweetAlertDialog(
-                                context, SweetAlertDialog.SUCCESS_TYPE)
-                                .setTitleText("Success")
-                                .setContentText("Transaction Deleted Successfully.")
-                                .show();
-                    } catch (Exception ex){
-                        new SweetAlertDialog(
-                                context, SweetAlertDialog.ERROR_TYPE)
-                                .setTitleText("Failed")
-                                .setContentText("Transaction Deletion Failed.")
-                                .show();
-                    }
+                                sweetAlertDialog.setTitleText("Success")
+                                        .setContentText("Transaction Deleted Successfully.")
+                                        .setConfirmText("OK").showCancelButton(false).setConfirmClickListener(null).changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+                                sectionItemList.remove(pos);
+                                notifyItemRemoved(pos);
+                            } catch (Exception ex){
+                                sweetAlertDialog
+                                        .setTitleText("Failed")
+                                        .setContentText("Transaction Deletion Failed.")
+                                        .setConfirmText("OK").showCancelButton(false).setConfirmClickListener(null).changeAlertType(SweetAlertDialog.ERROR_TYPE);
+                            }
+                        }
+                    }).show();
+
                 }
             }
         });

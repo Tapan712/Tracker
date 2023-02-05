@@ -14,8 +14,9 @@
     <string name="lbl_deposit">DEPOSIT</string>
     <string name="lbl_type">Type</string>
     <string name="lbl_value">0</string>
-    <string name="lbl_view_txn">View Transaction</string>
-    <string name="lbl_mng_txn">Manage Transaction</string>
+    <string name="lbl_view_txn">VIEW \nTRANSACTION</string>
+    <string name="lbl_mng_txn">MANAGE \nTRANSACTION</string>
+    <string name="lbl_mng_cb">CREDIT BOOK</string>
     <string name="lbl_from">From Date</string>
     <string name="lbl_to">To Date</string>
     <string name="lbl_search">Search</string>

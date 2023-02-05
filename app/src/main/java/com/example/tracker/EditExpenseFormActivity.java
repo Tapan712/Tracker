@@ -28,13 +28,16 @@ public class EditExpenseFormActivity extends AppCompatActivity {
     private RecyclerView tableGroup;
     private TableAdapter tableAdapter;
 
+    private static String type,action;
+    private static long lDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_expense_form);
         Intent intent = getIntent();
-        String type = intent.getStringExtra("Type");
-        String action = intent.getStringExtra("Action");
+        type = intent.getStringExtra("Type");
+        action = intent.getStringExtra("Action");
         TextInputLayout tilSearch = findViewById(R.id.search_field);
         Button btnSearch = findViewById(R.id.btn_search);
 
@@ -50,7 +53,6 @@ public class EditExpenseFormActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String date = Objects.requireNonNull(tilSearch.getEditText()).getText().toString().trim();
-                Long lDate = 0L;
                 try{
                     lDate = DateUtil.getLongDate(date);
                 } catch (Exception ignore){
@@ -63,7 +65,18 @@ public class EditExpenseFormActivity extends AppCompatActivity {
             }
         });
     }
-    public List<SectionItem> getTableList(String trnType,Long trnDate){
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        List<SectionItem> itemList = getTableList(type, lDate);
+        tableGroup = findViewById(R.id.table_recycler);
+        tableGroup.setLayoutManager(new LinearLayoutManager(context));
+        tableAdapter = new TableAdapter(action,type,context,itemList);
+        tableGroup.setAdapter(tableAdapter);
+    }
+
+    public List<SectionItem> getTableList(String trnType, Long trnDate){
         List<SectionItem> items = new ArrayList<>();
         List<Transaction> debitList= TrackerDB.getDb(context).transactionDao().findByTypeAndDate(trnType,trnDate);
         debitList.forEach(i->{
