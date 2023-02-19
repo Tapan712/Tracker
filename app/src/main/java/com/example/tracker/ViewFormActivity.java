@@ -29,6 +29,13 @@ public class ViewFormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_form);
         RadioGroup type = findViewById(R.id.type_group);
+        RadioButton allRd  = findViewById(R.id.radio_all);
+        RadioButton expRd  = findViewById(R.id.radio_exp);
+        RadioButton depRd  = findViewById(R.id.radio_deposit);
+        final int all = allRd.getId();
+        final int exp = expRd.getId();
+        final int dep = depRd.getId();
+
         TextInputLayout fdLayout = findViewById(R.id.lbl_fDate);
         TextInputLayout tdLayout = findViewById(R.id.lbl_To_Date);
         TextInputEditText txtFromDate = findViewById(R.id.txtDate);
@@ -62,7 +69,14 @@ public class ViewFormActivity extends AppCompatActivity {
                 boolean isError = false;
                 int selectedId = type.getCheckedRadioButtonId();
                 RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                String trnType = String.valueOf(radioButton.getText());
+                String trnType = null;
+                if (radioButton.getId()==exp){
+                    trnType = "EXPENSE";
+                } else if (radioButton.getId()==dep) {
+                    trnType = "DEPOSIT";
+                } else {
+                    trnType = "ALL";
+                }
                 String fromDate = Objects.requireNonNull(txtFromDate.getText()).toString();
                 String toDate = Objects.requireNonNull(txtToDate.getText()).toString();
                 Date fd = null;
@@ -94,7 +108,14 @@ public class ViewFormActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int selectedId = type.getCheckedRadioButtonId();
                 RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                String trnType = String.valueOf(radioButton.getText());
+                String trnType = null;
+                if (radioButton.getId()==exp){
+                    trnType = "EXPENSE";
+                } else if (radioButton.getId()==dep) {
+                    trnType = "DEPOSIT";
+                } else {
+                    trnType = "ALL";
+                }
                 String fromDate = DateUtil.getLastMonEndDate(new Date());
                 String toDate = DateUtil.getNextDateString(new Date());
                 Toast.makeText(getApplicationContext(),
@@ -109,7 +130,14 @@ public class ViewFormActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int selectedId = type.getCheckedRadioButtonId();
                 RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                String trnType = String.valueOf(radioButton.getText());
+                String trnType = null;
+                if (radioButton.getId()==exp){
+                    trnType = "EXPENSE";
+                } else if (radioButton.getId()==dep) {
+                    trnType = "DEPOSIT";
+                } else {
+                    trnType = "ALL";
+                }
                 String fromDate = DateUtil.getLastMonStartDate(new Date());
                 String toDate = DateUtil.getLastMonEndDate(new Date());
                 Toast.makeText(getApplicationContext(),
@@ -124,7 +152,14 @@ public class ViewFormActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int selectedId = type.getCheckedRadioButtonId();
                 RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                String trnType = String.valueOf(radioButton.getText());
+                String trnType = null;
+                if (radioButton.getId()==exp){
+                    trnType = "EXPENSE";
+                } else if (radioButton.getId()==dep) {
+                    trnType = "DEPOSIT";
+                } else {
+                    trnType = "ALL";
+                }
                 String fromDate = DateUtil.getCurYearStartDate(new Date());
                 String toDate = DateUtil.getNextDateString(new Date());
                 Toast.makeText(getApplicationContext(),

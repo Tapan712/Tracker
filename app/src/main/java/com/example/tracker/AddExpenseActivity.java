@@ -1,17 +1,14 @@
 package com.example.tracker;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tracker.dbhelper.TrackerDB;
 import com.example.tracker.entity.Category;
@@ -23,7 +20,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 

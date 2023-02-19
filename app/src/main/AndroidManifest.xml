@@ -13,6 +13,12 @@
         tools:replace="android:icon"
         tools:targetApi="31">
         <activity
+            android:name=".CBDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PersonViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".ReportScreenActivity"
             android:exported="false" />
         <activity

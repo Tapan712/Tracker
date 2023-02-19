@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bg"
+    android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trn_channel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:backgroundTint="@color/theme_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/edt_trn_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_channel"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/crd_date"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_crd_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/calender_icon"
+            android:hint="@string/lbl_date"
+            android:focusable="false"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/crd_desc"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_crd_desc"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="top"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/lbl_desc" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/btn_add"/>
+    </RelativeLayout>
+
+</LinearLayout>

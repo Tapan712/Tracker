@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-<!--<item></item>-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Show Paid"
+        android:id="@+id/paid"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item android:title="Show Received"
+        android:id="@+id/recvd"
+        android:orderInCategory="101"
+        app:showAsAction="never"/>
+    <item android:title="Clear Filter"
+        android:id="@+id/clrFil"
+        android:orderInCategory="102"
+        app:showAsAction="never"/>
+    <item android:title="Delete User"
+        android:id="@+id/delete"
+        android:orderInCategory="103"
+        app:showAsAction="never" />
 </menu>

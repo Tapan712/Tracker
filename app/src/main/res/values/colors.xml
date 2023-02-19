@@ -18,4 +18,5 @@
 
     <color name="bal_green">#66BB6A</color>
     <color name="exp_red">#EF5350</color>
+    <color name="dark_btn">#535050</color>
 </resources>

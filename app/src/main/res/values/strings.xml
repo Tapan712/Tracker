@@ -3,7 +3,7 @@
     <!--    home Labels-->
     <string name="str_welcome">WELCOME \nBACK</string>
     <string name="str_login">Please Login To Continue</string>
-    <string name="desc_login">Login Button</string>
+    <string name="desc_login" translatable="false">Login Button</string>
     <!--    dashboard labels-->
     <string name="lbl_expense">EXPENSE</string>
     <string name="lbl_expense_small">Expense</string>
@@ -13,7 +13,7 @@
     <string name="lbl_all">ALL</string>
     <string name="lbl_deposit">DEPOSIT</string>
     <string name="lbl_type">Type</string>
-    <string name="lbl_value">0</string>
+    <string name="lbl_value" translatable="false">0</string>
     <string name="lbl_view_txn">VIEW \nTRANSACTION</string>
     <string name="lbl_mng_txn">MANAGE \nTRANSACTION</string>
     <string name="lbl_mng_cb">CREDIT BOOK</string>
@@ -41,15 +41,34 @@
     <string name="lbl_dep_amount">Amount</string>
     <string name="lbl_vw_nos">nos X</string>
     <string name="lbl_rep_header">Category wise Expense</string>
+    <string name="lbl_cb_toPay">TO PAY</string>
+    <string name="lbl_cb_toReceive">TO RECEIVE</string>
+    <string name="lbl_lang_eng" translatable="false">English</string>
+    <string name="lbl_land_od">Odia</string>
+<!--     translate to odia-->
+    <string name="lbl_channel" translatable="false">Payment Gateway</string>
+    <string name="lbl_desc" translatable="false">Description</string>
+
 
     <!--    buttons-->
     <string name="btn_current_mth">Current\nmonth</string>
     <string name="btn_last_mth">Last\nmonth</string>
     <string name="btn_current_year">Current\nyear</string>
     <string name="btn_submit">Submit</string>
+    <string name="btn_paid">Paid</string>
+    <string name="btn_receive">Receive</string>
+    <string name="btn_add_person">Add Person</string>
+    <string name="btn_add">Add</string>
 
     <!--    hints-->
-    <string name="h_fDate">Select From Date</string>
-    <string name="h_toDate">Select To Date</string>
+    <string name="h_fDate" translatable="false">Select From Date</string>
+    <string name="h_toDate" translatable="false">Select To Date</string>
+    <string name="h_search">Search Person ...</string>
 
+
+    <!--    temp-->
+    <string name="temp_action" translatable="false">Action</string>
+    <string name="temp_channel" translatable="false">Channel</string>
+    <string name="temp_desc" translatable="false">Lorem ipsum</string>
+    <string name="temp_prs_name" translatable="false">Person Name</string>
 </resources>

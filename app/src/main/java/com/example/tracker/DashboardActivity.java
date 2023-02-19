@@ -56,6 +56,14 @@ public class DashboardActivity extends AppCompatActivity {
                 loadTrnForm();
             }
         });
+        CardView btnCB = findViewById(R.id.card_cb);
+        btnCB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                loadCbDashBoard();
+            }
+        });
     }
 
     @Override
@@ -93,6 +101,13 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intent = new Intent(this,TransactionDashboardActivity.class);
         startActivity(intent);
     }
+
+    private void loadCbDashBoard(){
+        Intent intent = new Intent(this,CBDashboardActivity.class);
+        startActivity(intent);
+    }
+
+
 
     private String[] calculateDashBoard(){
         TrackerDB db = TrackerDB.getDb(context);

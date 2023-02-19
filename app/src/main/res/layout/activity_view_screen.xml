@@ -20,7 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/lbl_dep_name"
                 android:paddingTop="5dp"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
@@ -40,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price"
+                android:text="@string/lbl_price"
                 android:paddingTop="5dp"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"

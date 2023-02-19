@@ -7,13 +7,17 @@ import androidx.biometric.BiometricPrompt;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tracker.util.LocaleUtil;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.concurrent.Executor;
@@ -24,11 +28,26 @@ public class MainActivity extends AppCompatActivity {
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
 
+    private Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FloatingActionButton mButton = findViewById(R.id.btnLogin);
+        TextView tv1 = findViewById(R.id.textView);
+        TextView tv2 = findViewById(R.id.textView2);
+        TextView tvOd = findViewById(R.id.txtOd);
+        Switch langSw= findViewById(R.id.langSwt);
+        String lg = LocaleUtil.startupLocale(context);
+        if(lg.equalsIgnoreCase("or")){
+            langSw.setChecked(true);
+            tv1.setText(context.getResources().getText(R.string.str_welcome));
+            tv2.setText(context.getResources().getText(R.string.str_login));
+            tvOd.setText(context.getResources().getText(R.string.lbl_land_od));
+        } else {
+            langSw.setChecked(false);
+        }
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -37,6 +56,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         authUser();
+//        LocaleUtil.setCurAppLocale(context,"or",false);
+        langSw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(langSw.isChecked()){
+                    LocaleUtil.setCurAppLocale(context,"or",true);
+                } else {
+                    LocaleUtil.setCurAppLocale(context,"en-us",true);
+                }
+                tv1.setText(context.getResources().getText(R.string.str_welcome));
+                tv2.setText(context.getResources().getText(R.string.str_login));
+                tvOd.setText(context.getResources().getText(R.string.lbl_land_od));
+            }
+        });
+
     }
 
     @Override
